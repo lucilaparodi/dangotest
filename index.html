@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        green: "#7AA65A",
+                        white: "#FFFFFF",
+                        black: "#000000",
+                        red: "red",
+                    },
+                    fontFamily: {
+                        inter: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <title>Sports Web</title>
+</head>
+
+<body>
+    <header>
+        <nav></nav>
+    </header>
+
+    <section class="mx-auto my-5">
+        <div
+            class="text-center text-green opacity-50 font-bold text-5xl lg:text-3xl xl:text-3xl font-inter my-5 py-5 lg:py-0 xl:my-0 xl:py-0 xl:my-0">
+            <h2 class="flex flex-col sm:block"><span>Featured</span> <span>Collection</span></h2>
+        </div>
+            <div id="productContainer"
+                class="w-fit mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4">
+            </div>
+        <div class="flex justify-center items-center my-5 py-3">
+            <button id="prevPageBtn" class="bg-white border-2 border-green px-4 py-2 rounded-full mx-1">
+                <svg class="w-7 h-7 xl:w-4 xl:h-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 7H3.83L9.42 1.41L8 0L0 8L8 16L9.41 14.59L3.83 9H16V7Z" fill="#7AA65A" />
+                </svg>
+            </button>
+            <button id="nextPageBtn" class="bg-green border-2 border-green px-4 py-2 rounded-full mx-1">
+                <svg class="w-7 h-7 xl:w-4 xl:h-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 7H12.17L6.58 1.41L8 0L16 8L8 16L6.59 14.59L12.17 9H0V7Z" fill="white" />
+                </svg>
+
+            </button>
+        </div>
+    </section>
+
+    <div id="cartModal" class="hidden fixed inset-0 flex justify-center items-center">
+        <div class="bg-white p-4 rounded-lg w-96 h-96 flex flex-col">
+            <div class="flex justify-between my-2">
+                <h2 class="text-xl font-bold font-inter font-bold text-green">Cart</h2>
+                <button onclick="closeCartModal()"
+                    class="bg-green border border-green px-2 rounded-xl text-white">x</button>
+            </div>
+            <ul id="cartItems" class="flex-1 overflow-y-auto">
+            </ul>
+            <div id="totalContainer" class="flex justify-between items-center"></div>
+        </div>
+    </div>
+
+
+    <footer></footer>
+
+    <script src="code.js"></script>
+</body>
+
+</html>
