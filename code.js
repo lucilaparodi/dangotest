@@ -23,7 +23,7 @@ function generateProductHTML(products) {
   return products
     .map(
       (product) => `
-        <article class="bg-white rounded-3xl shadow-xl m-2 xl:m-0 w-60 h-full justify-self-center">
+        <article class="bg-white rounded-3xl shadow-xl m-2 lg:m-0 w-60 h-full justify-self-center">
             <img src="${product.image}" alt="${product.id}" class="mx-auto object-cover h-80 p-4" />
             <div class="flex justify-between mx-1 px-3 pb-4 items-center flex-col xl:flex-row lg:flex-row">
                 <p class="text-2xl lg:text-base xl:text-base font-inter text-black">$${product.price}</p>

@@ -8,40 +8,141 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        green: "#7AA65A",
-                        white: "#FFFFFF",
-                        black: "#000000",
-                        red: "red",
-                    },
-                    fontFamily: {
-                        inter: ["Inter", "sans-serif"],
-                    },
-                },
-            },
-        };
-    </script>
-
+    <script src="tailwind.config.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Sports Web</title>
 </head>
 
 <body>
     <header>
-        <nav></nav>
+        <div class="bg-green py-1 w-full flex justify-center">
+            <h3 class="text-white text-xs">30% OFF ALL ORDERS UNTIL 4/27</h3>
+        </div>
+        <nav class="my-2 md:mt-7 flex">
+            <ul class="w-550 hidden md:flex m-auto my-1">
+                <div class="text-green hover:font-extrabold px-4 w-101 underline-hover-div">
+                    <li class="flex justify-center ">HOME</li>
+
+                </div>
+                <div class="text-green hover:font-extrabold px-4 w-101 underline-hover-div">
+                    <li class="flex justify-center">ITEM 1</li>
+
+                </div>
+                <div class="text-green hover:font-extrabold px-4 w-101 underline-hover-div">
+                    <li class="flex justify-center">ITEM 2</li>
+
+                </div>
+                <div class="text-green hover:font-extrabold px-4 w-101 underline-hover-div">
+                    <li class="flex justify-center">ITEM 3</li>
+
+                </div>
+                <div class="text-green hover:font-extrabold px-4 w-101 underline-hover-div">
+                    <li class="flex justify-center">ITEM 4</li>
+
+                </div>
+                <div class="text-green hover:font-extrabold px-4 w-101 underline-hover-div">
+                    <li class="flex justify-center">ITEM 5</li>
+
+                </div>
+            </ul>
+
+            <div class="md:hidden mx-3">
+                <button class="text-green hover:font-extrabold">
+                    <svg width="25" height="13" viewBox="0 0 25 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="0.5" x2="25" y2="0.5" stroke="black" />
+                        <line y1="6.5" x2="25" y2="6.5" stroke="black" />
+                        <line y1="12.5" x2="25" y2="12.5" stroke="black" />
+                    </svg>
+                </button>
+            </div>
+            <button class="m-0 p-0" onclick="openCartModal()">
+                <svg class="absolute top-10 md:top-14 right-3 md:right-12" width="18" height="21" viewBox="0 0 18 21"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12.1495 4.31124H10.5406C10.5406 2.41272 9.1005 0.875 7.32257 0.875C5.54463 0.875 4.10458 2.41272 4.10458 4.31124H2.49559C1.61064 4.31124 0.886597 5.0844 0.886597 6.02937V16.3381C0.886597 17.2831 1.61064 18.0562 2.49559 18.0562H12.1495C13.0345 18.0562 13.7585 17.2831 13.7585 16.3381V6.02937C13.7585 5.0844 13.0345 4.31124 12.1495 4.31124ZM7.32257 2.59312C8.20751 2.59312 8.93156 3.36628 8.93156 4.31124H5.71358C5.71358 3.36628 6.43762 2.59312 7.32257 2.59312ZM12.1495 16.3381H2.49559V6.02937H4.10458V7.74749C4.10458 8.21997 4.46661 8.60655 4.90908 8.60655C5.35155 8.60655 5.71358 8.21997 5.71358 7.74749V6.02937H8.93156V7.74749C8.93156 8.21997 9.29358 8.60655 9.73606 8.60655C10.1785 8.60655 10.5406 8.21997 10.5406 7.74749V6.02937H12.1495V16.3381Z"
+                        fill="#3A2676" />
+                    <ellipse cx="12.5753" cy="16" rx="3.97516" ry="4" fill="#7AA65A" stroke="#3A2676"
+                        stroke-width="1.5" />
+                </svg>
+            </button>
+
+
+        </nav>
     </header>
 
-    <section class="mx-auto my-5">
-        <div
-            class="text-center text-green opacity-50 font-bold text-5xl lg:text-3xl xl:text-3xl font-inter my-5 py-5 lg:py-0 xl:my-0 xl:py-0 xl:my-0">
-            <h2 class="flex flex-col sm:block"><span>Featured</span> <span>Collection</span></h2>
-        </div>
-            <div id="productContainer"
-                class="w-fit mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4">
+    <section>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="relative opacity-20 w-full" src="img/banner.png">
+                    <div class="md:flex absolute">
+                        <div class="mx-32 my-10 w-1/3">
+                            <div class="md:hidden">
+                                <img class="rounded-md " src="img/bannerimg1.png">
+                            </div>
+                            <h1 class="text-green text-inter text-4xl md:text-7xl font-light text-left mb-2">Lorem ipsum dolor sit
+                                amet</h1>
+                            <p class="hidden md:flex my-4 text-green text-inter font-light text-left">Nunc porttitor
+                                tortor metus, nec
+                                sagittis lectus accumsan quis. Aenean euismod mollis tempor.</p>
+                            <div class="md:flex my-8">
+                                <button class="mr-5 bg-green text-white px-7 py-5 rounded-xl text-xs flex w-227">SHOP
+                                    NOW <svg class="ml-14 flex justify-end" width="8" height="15" viewBox="0 0 8 15"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0 1.3281L1.22022 0L8 7.42836L1.21337 14.8567L0 13.5286L5.57326 7.42836L0 1.3281Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="md:border-2 md:border-green md:text-green text-black px-7 py-5 rounded-xl text-xs flex w-227">TAKE
+                                    THE QUIZ<svg class="hidden md:flex ml-8" width="8" height="15" viewBox="0 0 8 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0 1.3281L1.22022 0L8 7.42836L1.21337 14.8567L0 13.5286L5.57326 7.42836L0 1.3281Z"
+                                            fill="#7AA65A" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="hidden md:flex mx-32">
+                            <img class="w-img h-img rounded-md" src="img/bannerimg1.png">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img class="opacity-20 w-full h-w" src="img/banner.png">
+                </div>
+                <div class="swiper-slide">
+                    <img class="opacity-20 w-full h-w" src="img/banner.png">
+                </div>
             </div>
+            <div class="">
+                <div class="swiper-button-prev">
+                    <svg class="w-7 h-7 xl:w-4 xl:h-4" viewBox="0 0 16 16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 7H12.17L6.58 1.41L8 0L16 8L8 16L6.59 14.59L12.17 9H0V7Z" fill="white" />
+                    </svg>
+                </div>
+                <div class="swiper-button-next">
+                    <svg class="w-7 h-7 xl:w-4 xl:h-4" viewBox="0 0 16 16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 7H3.83L9.42 1.41L8 0L0 8L8 16L9.41 14.59L3.83 9H16V7Z" fill="#7AA65A" />
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="mx-auto my-12">
+        <div class="text-center text-green opacity-50 font-bold text-3xl font-inter">
+            <h2 class=""><span>Featured</span> <span>Collection</span></h2>
+        </div>
+        <div id="productContainer" class="w-fit mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+        </div>
         <div class="flex justify-center items-center my-5 py-3">
             <button id="prevPageBtn" class="bg-white border-2 border-green px-4 py-2 rounded-full mx-1">
                 <svg class="w-7 h-7 xl:w-4 xl:h-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +158,7 @@
         </div>
     </section>
 
-    <div id="cartModal" class="hidden fixed inset-0 flex justify-center items-center">
+    <div id="cartModal" class="hidden fixed inset-0 flex justify-center items-center z-10 ">
         <div class="bg-white p-4 rounded-lg w-96 h-96 flex flex-col">
             <div class="flex justify-between my-2">
                 <h2 class="text-xl font-bold font-inter font-bold text-green">Cart</h2>
@@ -73,7 +174,22 @@
 
     <footer></footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
     <script src="code.js"></script>
+
 </body>
 
 </html>
