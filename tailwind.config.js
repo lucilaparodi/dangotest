@@ -10,6 +10,9 @@ tailwind.config = {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
       },
+      screens: {
+        lx: "1190px",
+      },
     },
   },
   plugins: [
@@ -75,9 +78,11 @@ tailwind.config = {
           margin: "0",
           padding: "0",
         },
-        ".swiper": {
-          width: "fit",
-          height: "80vh",
+        ".whb": {
+          height: "630px",
+        },
+        ".whb-md": {
+          height: "520px",
         },
         ".swiper-slide": {
           textAlign: "center",
@@ -89,13 +94,14 @@ tailwind.config = {
         },
         ".swiper-slide img": {
           display: "block",
-          objectFit: "cover",
+          objectFit: "contain",
         },
         ".w-img": {
-          width: "55vh",
+          width: "486px",
         },
-        ".h-img": {
-          height: "60vh",
+        ".w-img2": {
+          width: "300px",
+          margin: "auto",
         },
       };
       addUtilities(newUtilities, ["responsive", "hover"]);
